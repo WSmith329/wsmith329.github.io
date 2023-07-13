@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William Dafydd Smith</title>
     
-    <script type="module" crossorigin src="/assets/index-2a9c9b94.js"></script>
-    <link rel="stylesheet" href="/assets/index-7c6a3a2e.css">
+    <script type="module" crossorigin src="/assets/index-a0b001d3.js"></script>
+    <link rel="stylesheet" href="/assets/index-3c93dd08.css">
   </head>
   <body>
     <div class="splash-screen">
       <div class="splash-logo-wrapper">
-        <img class="splash-logo" src="./textures/pixel-avatar.png" alt="Splash Logo">
+        <img class="splash-logo" src="./textures/logo-white.png" alt="Splash Logo">
       </div>
     </div>
 
@@ -21,34 +21,53 @@
       <canvas class="app-canvas"></canvas>
     </div>
 
+    <!-- Black Screen Transition -->
+    <div class="black-screen"></div>
+
+    <!-- Multi Layer Transition -->
+    <div class="transition-layer first-layer"></div>
+    <div class="transition-layer second-layer"></div>
+    <div class="transition-layer third-layer"></div>
 
     <div class="page page-1">
       <div class="page-wrapper">
         <section class="hero select-none">
           <div class="hero-wrapper grid grid-cols-6 grid-rows-2 md:grid-rows-1 content-start md:content-center">
             <div class="col-span-6 md:col-span-3 flex flex-col space-y-5 justify-center">
-              <h1 class="primary-txt font-bold text-3xl md:leading-tight md:text-4xl lg:leading-tight lg:text-5xl xl:leading-tight xl:text-6xl">Hi, my name is William Dafydd Smith.</h1>
+              <h1 class="primary-txt font-bold text-3xl md:leading-tight md:text-4xl lg:leading-tight lg:text-5xl xl:leading-tight xl:text-6xl">Welcome, my name is William Dafydd Smith.</h1>
               <p class="secondary-txt font-medium text-xl md:text-2xl lg:text-3xl">Software Engineering Graduate | Leeds, UK</p>
               <a id="index-btn" class="btn text-sm lg:text-base secondary-bg">Find out more</a>
             </div>
           </div>
+          <div id="click-hint" class="flex items-center content-center gap-2 white-txt primary-bg">
+            <p><i class="fa-solid fa-hand-pointer fa-2xl"></i></p>
+            <p class="font-semibold">Explore the magic! Click anywhere to unveil more.</p>
+          </div>
         </section>
+
         <a id="back-btn"><i class="fa-solid fa-backward fa-2xl"></i></a>
       </div>
     </div>
-
-    <div class="black-screen"></div>
 
     <div class="page page-2">
       <section id="portfolio">
         <div class="portfolio-index grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 mx-auto">
           <section class="flex flex-col row-span-1 col-span-1">
           </section>
-          <section class="portfolio-menu flex items-center justify-center row-span-1 col-span-1">
-            <div class="flex flex-col items-start gap-7 italic uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-widest">
-                <a class="shine-txt glowing-txt cursor-pointer">My Story</a>
-                <a class="shine-txt glowing-txt cursor-pointer">Projects</a>
-                <a class="shine-txt glowing-txt cursor-pointer">Let's Connect</a>
+          <section class="portfolio-menu-wrapper flex items-center justify-center row-span-1 col-span-1 m-auto md:ml-8">
+            <div id="portfolio-menu" class="w-full flex flex-col items-start gap-7 white-txt italic uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-widest">
+                <a id="my-story" class="portfolio-menu-heading glowing-txt">My Story</a>
+                <div class="flex w-full justify-between pr-8">
+                  <a id="projects" class="portfolio-menu-heading glowing-txt">Projects</a>
+                  <a><i id="projects-list-close" class="fas fa-xmark fa-xs"></i></a>
+                </div>
+                <div id="projects-list" class="flex flex-col text-2xl md:text-3xl lg:text-4xl xl:text-5xl gap-5">
+                  <a id="clf-btn" class="portfolio-menu-subheading projects-list-item glowing-txt">CL Fitness</a>
+                  <a id="naruto-btn" class="portfolio-menu-subheading projects-list-item glowing-txt">Naruto Chatbot</a>
+                  <a id="quill-btn" class="portfolio-menu-subheading projects-list-item glowing-txt">Quill.</a>
+                  <a id="utopia-btn" class="portfolio-menu-subheading projects-list-item glowing-txt">Utopia Games</a>
+                </div>
+                <a id="connect" class="portfolio-menu-heading glowing-txt">Let's Connect</a>
             </div>
           </section>
         </div>
@@ -62,6 +81,485 @@
         </div>
         <a id="exit-btn"><i class="fa-solid fa-person-through-window fa-2xl"></i></a>
       </section>
+    </div>
+
+    <div class="page page-3">
+      <section id="my-story-page" class="h-full">
+        <div class="h-full grid grid-rows-6 grid-cols-6">
+          <section class="row-span-1 row-start-1 col-span-6 col-start-1 flex justify-center items-center cursor-default">
+            <h1 class="white-txt italic uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-widest glowing-txt">My Story</h1>
+          </section>
+          <section id="skills" class="row-span-5 row-start-2 col-span-2 lg:col-span-1 col-start-1 overflow-hidden mb-6 mx-3 md:mx-6">
+            <div class="skills-overlay-top"></div>
+            <div class="skills-overlay-bottom"></div>
+            <div class="skill-slider flex flex-col items-center justify-between pb-10">
+              <div class="skill-card" style="background-color: #3F3F3F;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/AIML-3667104e.png">
+                  </div>
+                  <div class="skill-card-txt">AIML</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #2994E0;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Azure-584ad9a1.png">
+                  </div>
+                  <div class="skill-card-txt">Azure</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #8512FB;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Bootstrap-91b1ef22.png">
+                  </div>
+                  <div class="skill-card-txt">Bootstrap</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #803788;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Csharp-2ce08db2.png">
+                  </div>
+                  <div class="skill-card-txt">C#</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #00599C;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/C__-875fe49b.png">
+                  </div>
+                  <div class="skill-card-txt">C++</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #264DE4;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/CSS3-dce232a8.png">
+                  </div>
+                  <div class="skill-card-txt">CSS3</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #FCCA3F;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Firebase-0886c3ea.png">
+                  </div>
+                  <div class="skill-card-txt">Firebase</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #5F5286;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Haskell-ad317219.png">
+                  </div>
+                  <div class="skill-card-txt">Haskell</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #E44D26;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/HTML5-6fc64f89.png">
+                  </div>
+                  <div class="skill-card-txt">HTML5</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #F8981D;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Java-326930a0.png">
+                  </div>
+                  <div class="skill-card-txt">Java</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #EACA32;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/JavaScript-b23eb9a8.png">
+                  </div>
+                  <div class="skill-card-txt">JavaScript</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #0868AC;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/jQuery-83470c3e.png">
+                  </div>
+                  <div class="skill-card-txt">jQuery</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #512BD4;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/NET-3a8490f0.png">
+                  </div>
+                  <div class="skill-card-txt">.NET</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #4B8BBE;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Python-e956a8ab.png">
+                  </div>
+                  <div class="skill-card-txt">Python</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #0072C6;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/SQL-816d9200.png">
+                  </div>
+                  <div class="skill-card-txt">SQL</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #16BCB9;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Tailwind-32585ad6.png">
+                  </div>
+                  <div class="skill-card-txt">Tailwind</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #000000;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/ThreeJS-2f57c859.png">
+                  </div>
+                  <div class="skill-card-txt">ThreeJS</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #F29C1F;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/XML-2dd2ddbf.png">
+                  </div>
+                  <div class="skill-card-txt">XML</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #3F3F3F;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/AIML-3667104e.png">
+                  </div>
+                  <div class="skill-card-txt">AIML</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #2994E0;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Azure-584ad9a1.png">
+                  </div>
+                  <div class="skill-card-txt">Azure</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #8512FB;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Bootstrap-91b1ef22.png">
+                  </div>
+                  <div class="skill-card-txt">Bootstrap</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #803788;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Csharp-2ce08db2.png">
+                  </div>
+                  <div class="skill-card-txt">C#</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #00599C;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/C__-875fe49b.png">
+                  </div>
+                  <div class="skill-card-txt">C++</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #264DE4;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/CSS3-dce232a8.png">
+                  </div>
+                  <div class="skill-card-txt">CSS3</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #FCCA3F;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Firebase-0886c3ea.png">
+                  </div>
+                  <div class="skill-card-txt">Firebase</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #5F5286;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Haskell-ad317219.png">
+                  </div>
+                  <div class="skill-card-txt">Haskell</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #E44D26;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/HTML5-6fc64f89.png">
+                  </div>
+                  <div class="skill-card-txt">HTML5</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #F8981D;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Java-326930a0.png">
+                  </div>
+                  <div class="skill-card-txt">Java</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #EACA32;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/JavaScript-b23eb9a8.png">
+                  </div>
+                  <div class="skill-card-txt">JavaScript</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #0868AC;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/jQuery-83470c3e.png">
+                  </div>
+                  <div class="skill-card-txt">jQuery</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #512BD4;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/NET-3a8490f0.png">
+                  </div>
+                  <div class="skill-card-txt">.NET</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #4B8BBE;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Python-e956a8ab.png">
+                  </div>
+                  <div class="skill-card-txt">Python</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #0072C6;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/SQL-816d9200.png">
+                  </div>
+                  <div class="skill-card-txt">SQL</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #16BCB9;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/Tailwind-32585ad6.png">
+                  </div>
+                  <div class="skill-card-txt">Tailwind</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #000000;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/ThreeJS-2f57c859.png">
+                  </div>
+                  <div class="skill-card-txt">ThreeJS</div>
+                </div>
+              </div>
+              <div class="skill-card" style="background-color: #F29C1F;">
+                <div class="skill-card-overlay"></div>
+                <div class="skill-card-content">
+                  <div class="skill-card-img">
+                    <img src="/assets/XML-2dd2ddbf.png">
+                  </div>
+                  <div class="skill-card-txt">XML</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="text-box flex flex-col-reverse md:flex-row content-center row-span-4 md:row-span-3 row-start-2 col-span-4 lg:col-span-5 white-txt mx-3 md:mx-6 overflow-hidden">
+            <div id="about-content" class="h-3/4 w-full md:h-full md:w-3/4 flex flex-col-reverse justify-between gap-4 white-txt text-sm md:text-lg lg:text-xl overflow-y-scroll cursor-default p-5">
+              <p id="about-me-4" class="about-me-txt"></p>
+              <p id="about-me-3" class="about-me-txt"></p>
+              <p id="about-me-2" class="about-me-txt"></p>
+              <p id="about-me-1" class="about-me-txt"></p>
+              <p id="about-me-0" class="about-me-txt font-semibold secondary-txt text-base md:text-xl lg:text-2xl"></p>
+            </div>
+            <div class="portrait-wrapper h-1/4 w-full md:h-full md:w-1/4 overflow-hidden">
+              <img src="/assets/portrait-5d4c37d6.png" class="w-1/4 md:h-auto md:w-5/6">
+            </div>
+          </section>
+          <section class="flex content-center row-span-1 md:row-span-2 row-start-6 md:row-start-5 col-span-4 lg:col-span-5 white-txt">
+            <div class="w-full text-box flex flex-col cursor-default mb-6 mt-3 md:my-6 mx-3 md:mx-6 overflow-y-hidden overflow-x-scroll">
+              <div class="flex flex-nowrap flex-1 secondary-txt justify-between md:py-5 px-3 md:px-5 gap-1 md:gap-3">
+                <div class="quality-container"><i class="fas fa-lightbulb"></i><p>Innovative Problem-Solver</p></div>
+                <div class="quality-container"><i class="fas fa-person-digging"></i><p>Motivated Hard-Worker</p></div>
+                <div class="quality-container"><i class="fas fa-people-group"></i><p>Affable Team-Player</p></div>
+                <div class="quality-container"><i class="fas fa-book"></i><p>Eager Learner</p></div>
+                <div class="quality-container"><i class="fas fa-graduation-cap"></i><p>1st Class Graduate</p></div>
+                <div class="quality-container"><i class="fas fas fa-football-ball"></i><p>Sports Fan</p></div>
+                <div class="quality-container"><i class="fas fa-earth-americas"></i><p>Travelling Enthusiast</p></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <a class="return-btn"><i class="fas fa-arrow-circle-left fa-2xl"></i></a>
+    </div>
+
+    <div class="page page-4">
+      <section id="project-page" class="h-full overflow-y-scroll">
+          <section class="w-full h-1/6 flex justify-center items-center cursor-default">
+            <h1 id="project-page-title" class="white-txt italic uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-widest glowing-txt">This Project</h1>
+          </section>
+
+          <section id="tech-labels-wrapper" class="w-full flex justify-center items-center cursor-default text-xs gap-3 font-semibold mb-8">
+            <div id="HTML-label" style="background-color: #E44D26;"><p>HTML5</p></div>
+            <div id="CSS-label" style="background-color: #264DE4;"><p>CSS3</p></div>
+            <div id="JavaScript-label" style="background-color: #EACA32;"><p>JavaScript</p></div>
+            <div id="Bootstrap-label" style="background-color: #8512FB;"><p>Bootstrap</p></div>
+            <div id="jQuery-label" style="background-color: #0868AC;"><p>jQuery</p></div>
+            <div id="NET-label" style="background-color: #512BD4;"><p>.NET</p></div>
+            <div id="Csharp-label" style="background-color: #803788;"><p>C#</p></div>
+            <div id="SQL-label" style="background-color: #0072C6;"><p>SQL</p></div>
+            <div id="Python-label" style="background-color: #4B8BBE;"><p>Python</p></div>
+            <div id="AIML-label" style="background-color: #3F3F3F;"><p>AIML</p></div>
+            <div id="Java-label" style="background-color: #F8981D;"><p>Java</p></div>
+            <div id="XML-label" style="background-color: #F29C1F;"><p>XML</p></div>
+            <div id="Firebase-label" style="background-color: #FCCA3F;"><p>Firebase</p></div>
+            <div id="Azure-label" style="background-color: #2994E0;"><p>Azure</p></div>
+          </section>
+          
+          <section class="w-full flex flex-wrap gap-y-8 mb-8">
+            <div class="project-para-wrapper"><div class="text-box"><h2 id="project-subheading-1"></h2><p id="project-para-1"></p></div></div>
+            <div class="project-img-wrapper"><img id="project-img-1"/></div>
+            <div class="project-img-wrapper"><img id="project-img-2"/></div>
+            <div class="project-para-wrapper"><div class="text-box"><h2 id="project-subheading-2"></h2><p id="project-para-2"></p></div></div>
+            <div class="project-para-wrapper"><div class="text-box"><h2 id="project-subheading-3"></h2><p id="project-para-3"></p></div></div>
+            <div class="project-img-wrapper"><img id="project-img-3"/></div>
+            <div class="project-img-wrapper"><img id="project-img-4"/></div>
+            <div class="project-para-wrapper"><div class="text-box"><h2 id="project-subheading-4"></h2><p id="project-para-4"></p></div></div>
+          </section>
+      </section>
+      <a class="return-btn"><i class="fas fa-arrow-circle-left fa-2xl"></i></a>
+    </div>
+
+    <div class="page page-5">
+      <section class="w-full h-1/6 flex justify-center items-center cursor-default">
+        <h1 class="white-txt italic uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-widest glowing-txt">Let's Connect</h1>
+      </section>
+      <section class="w-full h-full pb-6 flex justify-center">
+        <div class="flex flex-col md:flex-row w-10/12 h-5/6">
+          <div class="w-full md:w-2/3 h-2/3 md:h-full flex justify-center items-center overflow-y-scroll overflow-x-hidden" style="background-color: rgba(255,255,255,0.05);">
+            <div class="w-10/12 h-5/6 md:flex md:flex-col md:justify-center">
+              <div class="white-txt mb-6 md:mt-6">Sending to <b>William Dafydd Smith</b></div>
+              <form class="w-full" action="https://formsubmit.co/a4c22bbc9e489ca8e3f963cf7a1ce08f" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display: none">
+
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Email Template -->
+                <input type="hidden" name="_template" value="box">
+
+                <!-- Confirmation -->
+                <input type="hidden" name="_next" value="confirmation.html">
+
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <input class="connect-form-input" id="connect-form-name" type="text" name="Name" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <input class="connect-form-input" id="connect-form-email" type="email" name="Email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <input class="connect-form-input" id="connect-form-subject" type="text" name="Subject" placeholder="Subject" required>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <textarea rows="4" class="connect-form-input resize-none" id="connect-form-message" name="Message" placeholder="Message" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="connect-form-button py-3 px-4 mb-6">Send&emsp;<i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 h-1/3 md:h-full primary-bg relative">
+            <div class="hidden md:flex absolute rounded-full primary-bg p-4 top-10 -left-7 xl:-left-12 w-14 xl:w-24 h-14 xl:h-24 justify-center items-center secondary-txt text-base xl:text-2xl">
+              <i class="fas fa-envelope fa-2xl"></i>
+            </div>
+            <div class="h-full flex flex-row md:flex-col justify-evenly items-center">
+              <a href="https://twitter.com/WillDafyddSmith">
+                <div class="flex flex-col items-center white-txt raise-txt">
+                    <i class="fab fa-twitter fa-2xl"></i>
+                    <p class="font-bold text-base hidden md:block lg:text-xl xl:text-2xl mt-4">@WillDafyddSmith</p>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/william-dafydd-smith/">
+                <div class="flex flex-col items-center white-txt raise-txt">
+                    <i class="fab fa-linkedin fa-2xl"></i>
+                    <p class="font-bold text-base hidden md:block lg:text-xl xl:text-2xl mt-4">/william-dafydd-smith/</p>
+                </div>
+              </a>
+              <a href="https://github.com/WSmith329">
+                <div class="flex flex-col items-center white-txt raise-txt">
+                    <i class="fab fa-github fa-2xl"></i>
+                    <p class="font-bold text-base hidden md:block lg:text-xl xl:text-2xl mt-4">WSmith329</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <a class="return-btn"><i class="fas fa-arrow-circle-left fa-2xl"></i></a>
     </div>
 
     
