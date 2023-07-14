@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William Dafydd Smith</title>
     
-    <script type="module" crossorigin src="/assets/index-8a20c2d4.js"></script>
-    <link rel="stylesheet" href="/assets/index-a344f180.css">
+    <script type="module" crossorigin src="/assets/index-d0c604f4.js"></script>
+    <link rel="stylesheet" href="/assets/index-ffa534e6.css">
   </head>
   <body>
     <div class="splash-screen">
@@ -15,6 +15,10 @@
         <img class="splash-logo" src="./textures/logo-white.png" alt="Splash Logo">
       </div>
     </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" src="./audio/HALO_-_145_-_MP3.mp3" autoplay loop muted></audio>
+    <button id="muteButton"><i id="muteIcon" class="fas fa-volume-xmark"></i></button>
 
     <!-- ThreeJS canvas -->
     <div class="app">
@@ -36,7 +40,14 @@
             <div class="col-span-6 md:col-span-3 flex flex-col space-y-5 justify-center">
               <h1 class="primary-txt font-bold text-3xl md:leading-tight md:text-4xl lg:leading-tight lg:text-5xl xl:leading-tight xl:text-6xl">Welcome, my name is William Dafydd Smith.</h1>
               <p class="secondary-txt font-medium text-xl md:text-2xl lg:text-3xl">Software Engineering Graduate | Leeds, UK</p>
-              <a id="index-btn" class="btn text-sm lg:text-base secondary-bg">Find out more</a>
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <a id="index-btn" class="btn text-sm lg:text-base secondary-bg">Find out more</a>
+                <div class="flex gap-3 lg:gap-6 ml-3 sm:mx-auto xl:mr-20">
+                  <a href="https://twitter.com/WillDafyddSmith" class="darken-primary-txt"><i class="fab fa-twitter fa-2xl"></i></a>
+                  <a href="https://www.linkedin.com/in/william-dafydd-smith/" class="darken-primary-txt"><i class="fab fa-linkedin fa-2xl"></i></a>
+                  <a href="https://github.com/WSmith329" class="darken-primary-txt"><i class="fab fa-github fa-2xl"></i></a>
+                </div>
+              </div>
             </div>
           </div>
           <div id="click-hint" class="flex items-center content-center gap-2 white-txt primary-bg">
@@ -492,7 +503,7 @@
       </section>
       <section class="w-full h-full pb-6 flex justify-center">
         <div class="flex flex-col md:flex-row w-10/12 h-5/6">
-          <div class="w-full md:w-2/3 h-2/3 md:h-full flex justify-center items-center overflow-y-scroll overflow-x-hidden" style="background-color: rgba(255,255,255,0.05);">
+          <div class="w-full md:w-2/3 h-2/3 md:h-full flex justify-center items-center overflow-y-scroll overflow-x-hidden rounded" style="background-color: rgba(255,255,255,0.05);">
             <div class="w-10/12 h-5/6 md:flex md:flex-col md:justify-center">
               <div class="white-txt mb-6 md:mt-6">Sending to <b>William Dafydd Smith</b></div>
               <form class="w-full" action="https://formsubmit.co/william.smith29@outlook.com" method="POST">
@@ -532,7 +543,7 @@
               </form>
             </div>
           </div>
-          <div class="w-full md:w-1/3 h-1/3 md:h-full primary-bg relative">
+          <div class="w-full md:w-1/3 h-1/3 md:h-full primary-bg relative rounded">
             <div class="hidden md:flex absolute rounded-full primary-bg p-4 top-10 -left-7 xl:-left-12 w-14 xl:w-24 h-14 xl:h-24 justify-center items-center secondary-txt text-base xl:text-2xl">
               <i class="fas fa-envelope fa-2xl"></i>
             </div>
